@@ -1,2 +1,3 @@
-require("config.remap")
-require("config.init_lazy") 		-- must set mapleader before calling lazy
+print("Using RFG's nvim")
+require("rfg.remap")
+require("rfg.packer")
