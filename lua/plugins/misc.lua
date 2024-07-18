@@ -1,0 +1,46 @@
+return {
+    -- {
+    --     "neovim/nvim-lspconfig",
+    --     dependencies = {
+    --         -- Mason for installing LSPs
+    --         {
+    --             "williamboman/mason.nvim",
+    --             config = true,
+    --         },
+    --         {
+    --             'williamboman/mason-lspconfig.nvim',
+    --         },
+    --         -- Not sure what this does?
+    --         -- {
+    --         --     'WhoIsSethDaniel/mason-tool-installer.nvim',
+    --         -- },
+    --         -- Useful status updates for LSP.
+    --         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+    --         { 'j-hui/fidget.nvim', opts = {} },
+    --
+    --         -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
+    --         -- used for completion, annotations and signatures of Neovim apis
+    --         { 'folke/neodev.nvim', opts = {} },
+    --     },
+    --     -- opts = {},
+    --     -- require("mason".setup)
+    --
+    -- },
+--     {
+--         {
+--             "williamboman/mason.nvim",
+--         },
+--         {
+--             "williamboman/mason-lspconfig.nvim",
+--         },
+--         {
+--             "neovim/nvim-lspconfig",
+--         },
+-- }
+--   },
+
+  -- -- Configure any other settings here. See the documentation for more details.
+  -- -- colorscheme that will be used when installing plugins.
+  -- -- automatically check for plugin updates
+  -- checker = { enabled = true },
+}
