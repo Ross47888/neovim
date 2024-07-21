@@ -20,7 +20,7 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
--- Leader + x 
+-- Leader + x
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {silent = true})
 
 -- Delete paste not to registry
@@ -29,3 +29,18 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Copy to system registry
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- Clear trailing whitespace
+vim.keymap.set("n", "<F5>", function()
+    vim.cmd([[
+        let _s=@/
+        %s/\s\+$//e
+        let @/=_s
+        nohl
+        unlet _s
+    ]])
+end)
+
+-- local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
+-- vim.keymap.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+-- vim.keymap.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)

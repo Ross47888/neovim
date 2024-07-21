@@ -4,56 +4,73 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+    use 'nvim-lua/plenary.nvim'
 
---------------------------- Telescope ---------------------------------
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.5',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
------------------------ Colour Schemes -----------------------------
-  use 'AlexvZyl/nordic.nvim'
-  use ({
-	  'nyoom-engineering/oxocarbon.nvim',
---	  as = 'oxocarbon',
-	  config = function()
-		  vim.cmd('colorscheme oxocarbon')
-	  end
-  })
---------------------------- TreeSitter ---------------------------------
-  use {
-	  'nvim-treesitter/nvim-treesitter',
-	  run = ':TSUpdate'
-  }
+    ------------------------- Telescope ---------------------------------
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    --------------------- Colour Schemes -----------------------------
+    use('AlexvZyl/nordic.nvim')
+    use('shaunsingh/nord.nvim')
+    use('cocopon/iceberg.vim')
+    use ({
+        'nyoom-engineering/oxocarbon.nvim',
+        as = 'oxocarbon',
+        config = function()
+            vim.cmd('colorscheme oxocarbon')
+        end
+    })
+    ------------------------- TreeSitter ---------------------------------
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+    use('nvim-treesitter/playground')
 
---------------------------- Vim-Fugitive ---------------------------------
-use {
-	'VonHeikemen/lsp-zero.nvim',
-	branch = 'v3.x',
-	requires = {
-		--- Uncomment the two plugins below if you want to manage the language servers from neovim
-		{'williamboman/mason.nvim'},
-		{'williamboman/mason-lspconfig.nvim'},
+    ------------------------- Vim-Fugitive ---------------------------------
+    use({
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup {
+                icons = false,
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    })
+    --------------------------- Vim-Fugitive ---------------------------------
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = {
+            --- Uncomment the two plugins below if you want to manage the language servers from neovim
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
 
-		-- LSP Support
-		{'neovim/nvim-lspconfig'},
-		-- Autocompletion
-		{'hrsh7th/nvim-cmp'},
-		{'hrsh7th/cmp-nvim-lsp'},
-		{'L3MON4D3/LuaSnip'},
-	}
-}
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'L3MON4D3/LuaSnip'},
+        }
+    }
+    -------------------------- Vim-Airline ---------------------------------
+    use('vim-airline/vim-airline')
 
--------------------------- Harpoon ---------------------------------
-use('nvim-lua/plenary.nvim') -- don't forget to add this one if you don't have it yet!
-use('ThePrimeagen/harpoon')
+    -------------------------- Harpoon ---------------------------------
+    use('nvim-lua/plenary.nvim') -- don't forget to add this one if you don't have it yet!
+    use('ThePrimeagen/harpoon')
 
+    --------------------------- undotree ---------------------------------
+    use('mbbill/undotree')
 
---------------------------- undotree ---------------------------------
-use('mbbill/undotree')
-
---------------------------- Vim-Fugitive ---------------------------------
-use('tpope/vim-fugitive')
+    --------------------------- Vim-Fugitive ---------------------------------
+    use('tpope/vim-fugitive')
 end)
