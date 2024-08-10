@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
     use('cocopon/iceberg.vim')
     use ({
         'nyoom-engineering/oxocarbon.nvim',
+        'Mofiqul/dracula.nvim',
         as = 'oxocarbon',
         config = function()
             vim.cmd('colorscheme oxocarbon')
