@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use('AlexvZyl/nordic.nvim')
     use('shaunsingh/nord.nvim')
     use('cocopon/iceberg.vim')
+    use('savq/melange-nvim')
     use ({
         'nyoom-engineering/oxocarbon.nvim',
         'Mofiqul/dracula.nvim',
