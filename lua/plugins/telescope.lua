@@ -30,9 +30,9 @@ local M =  {
 
         local builtin = require "telescope.builtin"
         vim.keymap.set('n', "<leader>sh", builtin.help_tags, {desc = "[S]earch [h]elp"})
-        vim.keymap.set('n', "<leader>vf", builtin.find_files, {desc = "Search local project files"})
-        vim.keymap.set('n', "<leader>vg", builtin.live_grep, {desc = "Search local project files"})
-        vim.keymap.set('n', "<leader>vw", builtin.grep_string, {desc = "Grep current word"})
+        vim.keymap.set('n', "<leader>pf", builtin.find_files, {desc = "Search local project files"})
+        vim.keymap.set('n', "<leader>pg", builtin.live_grep, {desc = "Search local project files"})
+        vim.keymap.set('n', "<leader>pw", builtin.grep_string, {desc = "Grep current word"})
         vim.keymap.set('n', "<leader>vd", builtin.diagnostics, {desc = "Search local diagnostics"})
         vim.keymap.set('n', "<leader>vr", builtin.resume, {desc = "Search resume"})
         -- vim.keymap.set('n', "<C-q>", builtin.close, {desc = "close telescope"})

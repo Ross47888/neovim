@@ -36,5 +36,11 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+local function goDefinition()
+    vim.cmd("mark R")
+    vim.lsp.buf.definition()
+end
+
+-- vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "gd", goDefinition)
 vim.keymap.set("n", "K", vim.lsp.buf.hover)

@@ -1,2 +1,2 @@
-<<<<<<< HEAD
+require "plugins"
 require "rfg"
