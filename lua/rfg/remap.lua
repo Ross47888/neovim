@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>vn", vim.cmd.Ex)
 
--- Primagen move lines, better than my current
 vim.keymap.set("n", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("n", "K", ":m '>-2<CR>gv=gv")
 

@@ -7,13 +7,9 @@ end
 spec("plugins.colourscheme")
 spec("plugins.fugitive")
 
-spec("plugins.telescope") -- fzf
--- spec("plugins.harpoon")
+spec("plugins.telescope")
 
-spec("plugins.lsp")
 spec("plugins.treesitter")
+spec("plugins.lsp")
 spec("plugins.mason")
-
-spec("plugins.misc")
-
 require("plugins.lazy")

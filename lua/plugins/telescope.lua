@@ -42,20 +42,4 @@ local M =  {
 
 }
 
--- function M.config()
---     local builtin = require "telescope.builtin"
---     require("telescope").setup {
---         defaults {
---             mappings {
---                 i = {
---                     ["<C-q>"] = builtin.close,
---                 },
---                 n = {
---                     ["<esc>"] = builtin.close,
---                 },
---             },
---         }
---     }
--- end
-
 return M
